@@ -8,8 +8,10 @@ namespace MyPortfolioProject.ViewComponents
         MyPortfolioContext portfolioContext = new MyPortfolioContext();
         public IViewComponentResult Invoke()
         {
-            var values = portfolioContext.Abouts.ToList();
-            return View(values);
+            ViewBag.aboutTitle = portfolioContext.Abouts.Select(x => x.Title).FirstOrDefault();
+            ViewBag.aboutSubDescription = portfolioContext.Abouts.Select(x => x.SubDescription).FirstOrDefault();
+            ViewBag.aboutDetails = portfolioContext.Abouts.Select(x => x.Details).FirstOrDefault();
+            return View();
         }
     }
 }

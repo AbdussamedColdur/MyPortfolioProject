@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyPortfolioProject.DAL.Context;
 
 namespace MyPortfolioProject.ViewComponents
 {
@@ -6,7 +7,9 @@ namespace MyPortfolioProject.ViewComponents
     {
         public IViewComponentResult Invoke()
         {
-            return View();
+            MyPortfolioContext portfolioContext = new MyPortfolioContext();
+            var values = portfolioContext.Skills.ToList();
+            return View(values);
         }
     }
 }
