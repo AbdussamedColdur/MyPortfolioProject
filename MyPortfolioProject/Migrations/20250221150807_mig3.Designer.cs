@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyPortfolioProject.DAL.Context;
 
@@ -11,9 +12,11 @@ using MyPortfolioProject.DAL.Context;
 namespace MyPortfolioProject.Migrations
 {
     [DbContext(typeof(MyPortfolioContext))]
-    partial class MyPortfolioContextModelSnapshot : ModelSnapshot
+    [Migration("20250221150807_mig3")]
+    partial class mig3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
