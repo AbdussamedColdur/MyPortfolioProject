@@ -1,0 +1,32 @@
+﻿@model About
+@{
+    ViewData["Title"] = "AboutDetail";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<input type="hidden" asp-for="AboutId" />
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Mesajlar</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Gelen Mesajlar Listesi</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-sub">
+                            <b>Başlık: </b>@Model.Title
+                            <br />
+                            <b>Alt Başlık: </b>@Model.SubDescription
+                            <br />
+                            <br />
+                            <b>Açıklama: </b>@Model.Details
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
