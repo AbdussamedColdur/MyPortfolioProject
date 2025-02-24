@@ -1,32 +1,30 @@
-﻿@model SocialMedia
+﻿@model Feature
 
 @{
-    ViewData["Title"] = "CreateSocial";
+    ViewData["Title"] = "UpdateFeature";
     Layout = "~/Views/Layout/Index.cshtml";
 }
 
 <div class="content">
     <div class="container-fluid">
-        <h4 class="page-title">Sosyal Medya</h4>
+        <h4 class="page-title">İçerik Bilgileri</h4>
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Sosyal Medya Ekleme Paneli</div>
+                        <div class="card-title">İçerik Bilgisi Güncelleme Paneli</div>
                     </div>
                     <div class="card-body">
                         <form method="post">
-                            <label>Platform</label>
+                            <input type="hidden" asp-for="FeatureId" />
+                            <label>Başlık</label>
                             <input type="text" asp-for="Title" class="form-control" />
                             <br />
-                            <label>Bağlantı</label>
-                            <input type="text" asp-for="Url" class="form-control" />
-                            <br />
-                            <label>Icon URL</label>
-                            <textarea rows="4" asp-for="Icon" class="form-control"></textarea>
+                            <label>Açıklama</label>
+                            <input type="text" asp-for="Description" class="form-control" />
                             <br />
                             <div class="d-flex justify-content-end">
-                                <button class="btn btn-primary">Sosyal Medya Ekle</button>
+                                <button class="btn btn-primary">İçerik Verisini Güncelle</button>
                             </div>
                         </form>
                     </div>
@@ -35,4 +33,3 @@
         </div>
     </div>
 </div>
-

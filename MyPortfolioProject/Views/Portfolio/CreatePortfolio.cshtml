@@ -1,6 +1,7 @@
-﻿@model Experience
+﻿@model Portfolio
+
 @{
-    ViewData["Title"] = "CreateExperience";
+    ViewData["Title"] = "CreatePortfolio";
     Layout = "~/Views/Layout/Index.cshtml";
 }
 
@@ -15,20 +16,23 @@
                     </div>
                     <div class="card-body">
                         <form method="post">
-                            <label>Deneyim Başlığı & Firma Bilgisi</label>
-                            <input type="text" asp-for="Head" class="form-control" />
-                            <br />
-                            <label>Unvan Bilgisi</label>
+                            <label>Portfolyo Başlık</label>
                             <input type="text" asp-for="Title" class="form-control" />
                             <br />
-                            <label>Çalışma Tarihi</label>
-                            <input type="text" asp-for="Date" class="form-control" />
+                            <label>Portfolyo Alt Başlık</label>
+                            <input type="text" asp-for="SubTitle" class="form-control" />
                             <br />
-                            <label>Deneyim Başlığı & Firma Bilgisi</label>
+                            <label>Portfolyo Bağlantı</label>
+                            <input type="text" asp-for="Url" class="form-control" />
+                            <br />
+                            <label>Portfolyo Resim(URL)</label>
+                            <input type="text" asp-for="ImgUrl" class="form-control" />
+                            <br />
+                            <label>Portfolyo Detaylı Açıklama</label>
                             <textarea rows="4" asp-for="Description" class="form-control"></textarea>
                             <br />
                             <div class="d-flex justify-content-end">
-                                <button class="btn btn-primary">Deneyim Ekle</button>
+                                <button class="btn btn-primary">Portfolyo Verisi Ekle</button>
                             </div>
                         </form>
                     </div>
@@ -37,7 +41,3 @@
         </div>
     </div>
 </div>
-
-
-
-

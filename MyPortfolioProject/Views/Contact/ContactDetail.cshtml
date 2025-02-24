@@ -1,0 +1,46 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "ContactDetail";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+
+<input type="hidden" asp-for="ContactId" />
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Mesajlar</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">İletişim Bilgileri Detay</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-sub">
+                            <b>Başlık: </b>@Model.Title
+                            <br />
+                            <br />
+                            <b>Tel 1: </b>@Model.Phone1 <b>Tel 2: </b>@Model.Phone2
+                            <br />
+                            <br />
+                            <b>Email 1: </b>@Model.Email1  <b>Email 2: </b>@Model.Email2
+                            <br />
+                            <br />
+                            <b>Adres: </b>@Model.Address
+                            <br />
+                            <br />
+                            <b>Açıklama: </b>@Model.Description
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
